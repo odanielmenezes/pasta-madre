@@ -41,12 +41,12 @@ const styled_homepage = styled.div`
             padding: 0 0 0 14%;
             text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.2);
             img {
-              width: 800px;
-              margin-left: -37px;
+              width: 550px;
+              margin-left: -27px;
             }
             small {
-              font-size: 18px;
-              width: 480px;
+              font-size: 16px;
+              width: 450px;
               margin-top: -40px;
             }
             button {

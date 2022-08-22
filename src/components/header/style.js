@@ -23,6 +23,9 @@ const styled_header = styled.div`
         margin: 0;
         padding: 0;
 
+        a {
+          text-decoration: none;
+        }
         li {
           color: ${colors.colors05};
           list-style: none;
