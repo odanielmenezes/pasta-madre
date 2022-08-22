@@ -1,29 +1,12 @@
-import React, { useState } from "react";
 import Styled from "./style";
 import Logo from "../../assets/logo.png";
 import User from "../../assets/user.png";
-import api from "../../api/api";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { Header } from "../../components/header/header";
 
 export function Component() {
-  const [email, setEmail] = useState("");
-  const [nome, setNome] = useState("");
-  const [mensagem, setMensagem] = useState("");
-  const sendMail = () => {
-    api
-      .get(`/send/${email}/${nome}/${mensagem}`, {
-        body: {
-          teste: "teste",
-        },
-      })
-      .then((response) => console.log(response))
-      .catch((err) => {
-        console.error("ops! ocorreu um erro" + err);
-      });
-  };
-
   return (
     <Styled>
       <div className="HomePage">
@@ -38,10 +21,13 @@ export function Component() {
                   com muito carinho e planejamento cada detalhe para tornar seus
                   momentos ainda mais inesqueciveis!
                 </small>
-                <button>
-                  {" "}
-                  Solicite um orçamento <FontAwesomeIcon icon={faCaretRight} />
-                </button>
+                <Link to="/orcamento">
+                  <button>
+                    {" "}
+                    Solicite um orçamento{" "}
+                    <FontAwesomeIcon icon={faCaretRight} />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -77,21 +63,6 @@ export function Component() {
           <div className="HomePage__Sobre__Img">
             <img src={User} alt="User" />
           </div>
-        </div>
-        <div>
-          <input
-            type="text"
-            id="nome"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="text"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-          />
-          <input type="text" value={mensagem} onChange={e => setMensagem(e.target.value)} />
-          <button onClick={sendMail}>ENVIAR</button>
         </div>
       </div>
     </Styled>

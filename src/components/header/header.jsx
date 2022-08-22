@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "./style";
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -11,9 +12,9 @@ export function Header() {
         </div>
         <div className="Header__Items">
             <ul>
-                <li>SOBRE NÓS</li>
+                <Link to="/"><li>HOME</li></Link>
                 <li>CONTATO</li>
-                <li>ORÇAMENTO</li>
+                <Link to="/orcamento"><li>ORÇAMENTO</li></Link>
                 <li>GALERIA</li>
             </ul>
         </div>
