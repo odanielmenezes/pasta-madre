@@ -170,49 +170,51 @@ const styled_homepage = styled.div`
     }
     .carousel {
       width: 600px;
-      height: 600px;
       position: relative;
       margin-right: 200px;
       small.Arrasta {
         color: #fff;
-        margin-left: 170px;
+        margin-left: 240px;
       }
-      #app {
-        height: 100%;
-      }
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
+      .mySwiper {
+        #app {
+          height: 100%;
+        }
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
 
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
 
-      .swiper {
-        width: 600px;
-        height: 600px;
-        position: absolute;
-        right: 10%;
-        top: 30%;
-        margin-left: -150px;
-        margin-top: -150px;
-      }
+        .swiper {
+          width: 300px;
+          height: 300px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -150px;
+          margin-top: -150px;
+        }
 
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-      }
+        .swiper-slide {
+          margin-top: 10px;
+          background-position: center;
+          background-size: cover;
+        }
 
-      .swiper-slide img {
-        display: block;
-        width: 100%;
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+        }
       }
     }
     .softskills {

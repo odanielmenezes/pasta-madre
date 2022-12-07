@@ -17,11 +17,13 @@ import {
   faGaugeSimpleHigh,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
-import { EffectFlip, Pagination, Navigation } from "swiper";
+import { EffectCube, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/effect-cube";
+import "swiper/css/pagination";
 
 export function Component() {
   const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -66,11 +68,16 @@ export function Component() {
             <div className="carousel">
               <small className="Arrasta">👈 arrasta pro lado 👉</small>
               <Swiper
-                effect={"flip"}
+                effect={"cube"}
                 grabCursor={true}
+                cubeEffect={{
+                  shadow: true,
+                  slideShadows: true,
+                  shadowOffset: 20,
+                  shadowScale: 0.94,
+                }}
                 pagination={true}
-                navigation={true}
-                modules={[EffectFlip, Pagination, Navigation]}
+                modules={[EffectCube, Pagination]}
                 className="mySwiper"
               >
                 <SwiperSlide>
