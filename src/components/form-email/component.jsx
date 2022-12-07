@@ -15,11 +15,7 @@ export function SenderEmail() {
   const sendMail = useCallback(() => {
     setSend(true);
     api
-      .get(`/send/${email}/${nome}/${mensagem}`, {
-        body: {
-          teste: "teste",
-        },
-      })
+      .get(`/send/${email}/${nome}/${mensagem}`)
       .then((response) => console.log(response))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
