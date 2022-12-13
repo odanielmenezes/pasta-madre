@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pasta-madre/static/css/main.125f69ca.css",
-    "main.js": "/pasta-madre/static/js/main.cc7a5992.js",
+    "main.js": "/pasta-madre/static/js/main.56eb52dd.js",
     "static/media/item01.png": "/pasta-madre/static/media/item01.24d15efe5d35de05e64b.png",
     "static/media/item02.png": "/pasta-madre/static/media/item02.9f6e789d4b0ba830e867.png",
     "static/media/item03.png": "/pasta-madre/static/media/item03.52c5c8ed41b98d807662.png",
@@ -17,10 +17,10 @@
     "static/media/logo-sao-miguel.png": "/pasta-madre/static/media/logo-sao-miguel.b6e72f8d6e6a569122e3.png",
     "index.html": "/pasta-madre/index.html",
     "main.125f69ca.css.map": "/pasta-madre/static/css/main.125f69ca.css.map",
-    "main.cc7a5992.js.map": "/pasta-madre/static/js/main.cc7a5992.js.map"
+    "main.56eb52dd.js.map": "/pasta-madre/static/js/main.56eb52dd.js.map"
   },
   "entrypoints": [
     "static/css/main.125f69ca.css",
-    "static/js/main.cc7a5992.js"
+    "static/js/main.56eb52dd.js"
   ]
 }
