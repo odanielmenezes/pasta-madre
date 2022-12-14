@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/pasta-madre/static/css/main.125f69ca.css",
-    "main.js": "/pasta-madre/static/js/main.65e49e97.js",
-    "static/media/item01.png": "/pasta-madre/static/media/item01.24d15efe5d35de05e64b.png",
-    "static/media/item02.png": "/pasta-madre/static/media/item02.9f6e789d4b0ba830e867.png",
-    "static/media/item03.png": "/pasta-madre/static/media/item03.52c5c8ed41b98d807662.png",
-    "static/media/frono-acessorios.png": "/pasta-madre/static/media/frono-acessorios.e9ea4b475b26568640ff.png",
-    "static/media/massa-sabor-01.png": "/pasta-madre/static/media/massa-sabor-01.a22635a9226646da2355.png",
-    "static/media/massa-sabor-03.png": "/pasta-madre/static/media/massa-sabor-03.faaf093f93215dc9059b.png",
-    "static/media/logo-correios.png": "/pasta-madre/static/media/logo-correios.09b9fbd0c6d99991f147.png",
-    "static/media/massa-sabor-02.png": "/pasta-madre/static/media/massa-sabor-02.43c8223a2ce78e07cb8b.png",
-    "static/media/massa-sabor-05.jpg": "/pasta-madre/static/media/massa-sabor-05.6f79d93638419b1c26d3.jpg",
-    "static/media/logo-sedex.png": "/pasta-madre/static/media/logo-sedex.4bf7bb1f84be8340c7f8.png",
-    "static/media/logo.png": "/pasta-madre/static/media/logo.063b5a010537d2ec5b6b.png",
-    "static/media/massa-sabor-04.jpg": "/pasta-madre/static/media/massa-sabor-04.f2181edcd8c14430d815.jpg",
-    "static/media/logo-sao-miguel.png": "/pasta-madre/static/media/logo-sao-miguel.b6e72f8d6e6a569122e3.png",
-    "index.html": "/pasta-madre/index.html",
-    "main.125f69ca.css.map": "/pasta-madre/static/css/main.125f69ca.css.map",
-    "main.65e49e97.js.map": "/pasta-madre/static/js/main.65e49e97.js.map"
+    "main.css": "/static/css/main.125f69ca.css",
+    "main.js": "/static/js/main.503f9565.js",
+    "static/media/item01.png": "/static/media/item01.24d15efe5d35de05e64b.png",
+    "static/media/item02.png": "/static/media/item02.9f6e789d4b0ba830e867.png",
+    "static/media/item03.png": "/static/media/item03.52c5c8ed41b98d807662.png",
+    "static/media/frono-acessorios.png": "/static/media/frono-acessorios.e9ea4b475b26568640ff.png",
+    "static/media/massa-sabor-01.png": "/static/media/massa-sabor-01.a22635a9226646da2355.png",
+    "static/media/massa-sabor-03.png": "/static/media/massa-sabor-03.faaf093f93215dc9059b.png",
+    "static/media/logo-correios.png": "/static/media/logo-correios.09b9fbd0c6d99991f147.png",
+    "static/media/massa-sabor-02.png": "/static/media/massa-sabor-02.43c8223a2ce78e07cb8b.png",
+    "static/media/massa-sabor-05.jpg": "/static/media/massa-sabor-05.6f79d93638419b1c26d3.jpg",
+    "static/media/logo-sedex.png": "/static/media/logo-sedex.4bf7bb1f84be8340c7f8.png",
+    "static/media/logo.png": "/static/media/logo.063b5a010537d2ec5b6b.png",
+    "static/media/massa-sabor-04.jpg": "/static/media/massa-sabor-04.f2181edcd8c14430d815.jpg",
+    "static/media/logo-sao-miguel.png": "/static/media/logo-sao-miguel.b6e72f8d6e6a569122e3.png",
+    "index.html": "/index.html",
+    "main.125f69ca.css.map": "/static/css/main.125f69ca.css.map",
+    "main.503f9565.js.map": "/static/js/main.503f9565.js.map"
   },
   "entrypoints": [
     "static/css/main.125f69ca.css",
-    "static/js/main.65e49e97.js"
+    "static/js/main.503f9565.js"
   ]
 }
