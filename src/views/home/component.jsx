@@ -9,6 +9,10 @@ import Massa02 from "../../assets/massa-sabor-02.png";
 import Massa03 from "../../assets/massa-sabor-03.png";
 import Massa04 from "../../assets/massa-sabor-04.jpg";
 import Massa05 from "../../assets/massa-sabor-05.jpg";
+import LogoSaoMiguel from "../../assets/logo-sao-miguel.png";
+import LogoCorreios from "../../assets/logo-correios.png";
+import LogoSedex from "../../assets/logo-sedex.png";
+import LogoViopex from "../../assets/logo-viopex.png";
 import GoogleMapReact from "google-map-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,7 +20,13 @@ import {
   faTruckFast,
   faGaugeSimpleHigh,
   faStar,
+  faCopyright,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faFacebook,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import { EffectCube, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -99,6 +109,57 @@ export function Component() {
             </div>
           </div>
         </div>
+        <div className="softskills">
+          <div className="softskills__items">
+            <div className="soft__item">
+              <FontAwesomeIcon icon={faStar} />
+              <img src={Item01} alt="" />
+              <div className="SoftTexts__Item">
+                <h1>Qualidade</h1>
+                <p>
+                  trabalhamos com todo cuidado para lhe entregar um produto
+                  padronizado e com insumos da melhor qualidade.
+                </p>
+              </div>
+            </div>
+            <div className="soft__item">
+              <FontAwesomeIcon icon={faGaugeSimpleHigh} />
+              <img src={Item02} alt="" />
+              <div className="SoftTexts__Item">
+                <h1>Agilidade</h1>
+                <p>
+                  Estamos preparados para lhe enviar o seu pedido com a maior
+                  agilidade inclusive em grandes de mandas.
+                </p>
+              </div>
+            </div>
+            <div className="soft__item">
+              <FontAwesomeIcon icon={faTruckFast} />
+              <img src={Item03} alt="" />
+              <div className="SoftTexts__Item">
+                <h1>Envios para todo BR</h1>
+                <p>
+                  enviamos para todo Brasil via transportadoras expressas e
+                  correios.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="transportadoras">
+          <div className="transportadora">
+            <img src={LogoSaoMiguel} alt="" />
+          </div>
+          <div className="transportadora">
+            <img src={LogoSedex} alt="" />
+          </div>
+          <div className="transportadora">
+            <img src={LogoCorreios} alt="" />
+          </div>
+          <div className="transportadora">
+            <img src={LogoViopex} alt="" />
+          </div>
+        </div>
         <div className="HomePage__Sobre">
           <div className="HomePage__Sobre__Text">
             <h1>
@@ -111,40 +172,18 @@ export function Component() {
               diferente com baixíssimo custo de investimento, alem de
               embalagens, suportes e banners.
             </p>
+            <a
+              href="http://wa.me/555195594785/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>
+                Quero saber mais <FontAwesomeIcon icon={faCaretRight} />
+              </button>
+            </a>
           </div>
           <div className="HomePage__Sobre__Img">
             <img src={AcessoriosPizza} alt="User" />
-          </div>
-        </div>
-        <div className="softskills">
-          <div className="softskills__items">
-            <div className="soft__item">
-              <FontAwesomeIcon icon={faStar} />
-              <img src={Item01} alt="" />
-              <h1>Qualidade</h1>
-              <p>
-                trabalhamos com todo cuidado para lhe entregar um produto
-                padronizado e com insumos da melhor qualidade.
-              </p>
-            </div>
-            <div className="soft__item">
-              <FontAwesomeIcon icon={faGaugeSimpleHigh} />
-              <img src={Item02} alt="" />
-              <h1>Agilidade</h1>
-              <p>
-                Estamos preparados para lhe enviar o seu pedido com a maior
-                agilidade inclusive em grandes de mandas.
-              </p>
-            </div>
-            <div className="soft__item">
-              <FontAwesomeIcon icon={faTruckFast} />
-              <img src={Item03} alt="" />
-              <h1>Envios para todo BR</h1>
-              <p>
-                enviamos para todo Brasil via transportadoras expressas e
-                correios.
-              </p>
-            </div>
           </div>
         </div>
         <div className="horarios">
@@ -174,7 +213,7 @@ export function Component() {
         </div>
         <div className="tutorials">
           <div className="text">
-            <h1>Confira um pouco do nosso conteúdo no youtube:</h1>
+            <h1>Confira um pouco do nosso conteúdo no YouTube:</h1>
           </div>
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             <SwiperSlide>
@@ -232,6 +271,43 @@ export function Component() {
               ></iframe>
             </SwiperSlide>
           </Swiper>
+        </div>
+        <div className="footer">
+          <div className="LogoPasta">
+            <img src={Logo} alt="" />
+          </div>
+          <div className="copyright">
+            <small>
+              <FontAwesomeIcon icon={faCopyright} /> 2023 - Pasta Madre - Todos
+              os direitos reservados
+            </small>
+          </div>
+          <div className="infos">
+            <div className="siga-nos">Fique por dentro:</div>
+            <div className="icons">
+              <a
+                href="https://www.instagram.com/pastamdr/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                href="https://www.facebook.com/pastamdr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a
+                href="http://wa.me/555195594785/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faWhatsapp} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </Styled>

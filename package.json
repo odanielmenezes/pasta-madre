@@ -1,7 +1,7 @@
 {
   "name": "pastamadre",
   "version": "0.1.0",
-  "homepage": "https://odanielmenezes.github.io/pasta-madre/",
+  "homepage": "http://pastamdr.com.br/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",

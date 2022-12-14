@@ -12,15 +12,17 @@ const styled_homepage = styled.div`
   .HomePage {
     .HomePage__Apresentacao {
       background-color: ${colors.colors05}; /* Used if the image is unavailable */
-      height: 100vh; /* You must set a specified height */
+      height: auto; /* You must set a specified height */
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover; /* Resize the background image to cover the entire container */
       position: relative;
 
       .HomePage__Apresentacao_Content {
+        height: auto;
+        padding: 50px 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         background-image: linear-gradient(
           to left,
@@ -35,11 +37,9 @@ const styled_homepage = styled.div`
           color: #fff;
 
           .HomePage__Apresentacao_MainText {
-            margin: 30px;
             display: flex;
             flex-direction: column;
             gap: 40px;
-            padding: 0 0 0 14%;
             text-shadow: 4px 4px 6px rgba(255, 255, 255, 0.2);
             h1 {
               font-family: "Emilys Candy", cursive;
@@ -49,6 +49,7 @@ const styled_homepage = styled.div`
               margin: 25px 0;
               text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
               position: relative;
+              width: 500px;
               img {
                 right: 189px;
                 top: -29px;
@@ -92,7 +93,8 @@ const styled_homepage = styled.div`
     }
     .HomePage__Sobre {
       background-color: ${colors.colors05};
-      height: 100vh;
+      height: auto;
+      padding: 100px 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -102,6 +104,10 @@ const styled_homepage = styled.div`
         width: 600px;
         text-align: justify;
         color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
 
         h1 {
           text-align: center;
@@ -115,6 +121,27 @@ const styled_homepage = styled.div`
           font-size: 22px;
           text-align: center;
         }
+        button {
+              font-size: 1em;
+              width: 300px;
+              padding: 20px 0;
+              border-radius: 40px;
+              outline-style: none;
+              border-style: none;
+              background-color: ${colors.colors05};
+              color: #fff;
+              font-weight: bold;
+              box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+              cursor: pointer;
+              transition: 0.1s;
+              border: 1px solid #000;
+              margin: 20px 0;
+            }
+            button:hover {
+              transform: scale(1.03);
+              box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.8);
+              transition: 0.1s ease-in;
+            }
       }
       img {
         width: 500px;
@@ -171,7 +198,6 @@ const styled_homepage = styled.div`
     .carousel {
       width: 600px;
       position: relative;
-      margin-right: 200px;
       small.Arrasta {
         color: #fff;
         margin-left: 240px;
@@ -196,8 +222,8 @@ const styled_homepage = styled.div`
         }
 
         .swiper {
-          width: 300px;
-          height: 300px;
+          width: 200px !important;
+          height: 200px !important;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -219,20 +245,36 @@ const styled_homepage = styled.div`
     }
     .softskills {
       background-color: ${colors.colors05};
-      height: 100vh;
+      height: auto;
+      padding: 100px 0;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       .softskills__items {
-        width: 100vw;
+        width: 70vw;
         display: flex;
         justify-content: space-evenly;
+        flex-direction: column;
+        gap: 50px;
         .soft__item {
-          width: 380px;
+          display: flex;
           position: relative;
           text-align: center;
-          background: #00000080;
+          background: rgba(0,0,0, .1);
           padding: 20px;
+
+          &:nth-child(2) {
+            flex-direction: row-reverse;
+            svg {
+              left: 0;
+            }
+          }
+          .SoftTexts__Item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+          }
           img {
             box-shadow: 3px 3px 5px black;
             width: 380px;
@@ -252,15 +294,83 @@ const styled_homepage = styled.div`
             white-space: nowrap;
           }
           p {
+            margin: 0 auto;
+            width: 90%;
             font-size: 22px;
             color: #fff;
           }
         }
       }
     }
+    .footer {
+      background-color: ${colors.colors05};
+      height: auto;
+      padding: 50px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #FFF;
+
+      .LogoPasta {
+        width: 170px;
+        margin: 0 20px;
+
+        img {
+          width: 100%;
+          filter: drop-shadow(3px 3px 3px #000);
+        }
+      }
+      .infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 30px;
+        .siga-nos {
+          font-size: 13px;
+          margin: 10px 0;
+        }
+        .icons {
+          display: flex;
+          gap: 15px;
+          a {
+            text-decoration: none;
+            color: #FFF;
+          }
+          svg {
+            cursor: pointer;
+            font-size: 42px;
+            transition: .3s;
+             
+            :hover {
+              transform: rotate(-20deg);
+              filter: drop-shadow(2px 2px 2px #000);
+              transition: .3s;
+            }
+          }
+        }
+      }
+    }
+    .transportadoras {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: ${colors.colors05};
+      height: auto;
+      padding: 50px 0;
+      
+      gap: 100px;
+      .transportadora {
+        width: 220px;
+        img {
+          filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 1));
+          width: 100%;
+        }
+      }
+    }
     .tutorials {
       background-color: #4b1d1a;
-      height: 80vh;
+      height: auto;
+      padding: 100px 0;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -274,7 +384,7 @@ const styled_homepage = styled.div`
         text-align: center;
       }
       .swiper {
-        width: 60vw;
+        width: 80%;
         height: 600px;
       }
 
@@ -312,11 +422,12 @@ const styled_homepage = styled.div`
     }
     .horarios {
       background-image: linear-gradient(
-        to left,
+        90deg,
         ${colors.colors05},
-        rgba(0, 0, 0, 1)
+        rgba(0, 0, 0, 1) 110%
       );
-      height: 600px;
+      height: auto;
+      padding: 100px 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -338,61 +449,187 @@ const styled_homepage = styled.div`
   }
   @media (max-width: 600px) {
     .HomePage {
-      min-width: 380px;
+      width: 100vw !important;
+      height: auto !important;
+      overflow: hidden !important;
       .HomePage__Apresentacao {
-        height: 80vh;
-
         .HomePage__Apresentacao_Content {
-          background-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-          );
-          height: 80vh;
-          display: flex;
+          flex-direction: column;
           justify-content: center;
+          padding: 0;
+          height: auto;
+
           .HomePage__Apresentacao_Texts {
             .HomePage__Apresentacao_MainText {
+              display: flex !important;
+              gap: 70px;
+              justify-content: center !important;
               align-items: center;
-              gap: 80px;
-              padding: 0;
-              img {
-                width: 300px;
-                margin: 0;
+              padding: 50px 0 0 0;
+              h1 {
+                font-size: 66px;
+                line-height: 55px;
+                text-align: center;
+                margin: 0 auto;
+                width: 220px;
+                position: relative;
+
+                img {
+                  position: absolute;
+                  right: 0;
+                  top: -22px;
+                  width: 60px;
+                }
               }
               small {
                 width: 300px;
-                font-size: 1em;
-                line-height: 20px;
+                font-size: 13px;
                 text-align: center;
               }
-              button {
-                width: 250px;
-                margin: 0 auto;
+              a {
+                text-decoration: none;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                width: 500px;
+                margin-top: -30px;
               }
             }
           }
         }
       }
-      .HomePage__Sobre {
+      .carousel {
         height: auto;
-        display: flex;
-        flex-direction: column-reverse;
-
-        .HomePage__Sobre__Text {
-          width: 90vw;
-          margin: 10px 0 30px 0;
-
-          h1 {
-            text-align: center;
+        padding: 50px 0;
+        small {
+          width: 100vw !important;
+          text-align: center;
+        }
+        .swiper.swiper-cube.swiper-3d.swiper-initialized.swiper-horizontal.swiper-ios.swiper-watch-progress.mySwiper {
+          width: 300px !important;
+          height: auto;
+          position: relative;
+          margin: 20px auto;
+        }
+        .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+          bottom: -45px;
+        }
+        span.swiper-pagination-bullet {
+            border: 1px solid #FFF;
+        }
+      }
+      .softskills {
+        width: 100vw !important;
+        .softskills__items {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 50px;
+          .soft__item {
+            gap: 30px;
+            width: 80vw;
+            .SoftTexts__Item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0 auto;
+            }
+            svg {
+              font-size: 35px;
+              right: 3px;
+              top: -20px;
+            }
+            h1 {
+              font-size: 18px;
+              width: 95%;
+              white-space: pre-wrap;
+            }
+            p {
+              text-align: center;
+              font-size: 13px;
+            }
+            img {
+              margin: auto;
+              width: 140px;
+              height: 140px;
+            }
           }
         }
-        img {
-          width: 350px;
-          margin: 30px 0 0 0;
+      }
+      .transportadoras {
+        display: flex;
+        flex-direction: column;
+      }
+      .HomePage__Sobre {
+        flex-direction: column;
+        gap: 30px !important;
+        .HomePage__Sobre__Text {
+          h1 {
+            font-size: 35px;
+            line-height: 32px;
+          }
+          p {
+            font-size: 16px;
+            width: 300px;
+            margin: 0 auto;
+          }
         }
+        .HomePage__Sobre__Img {
+          display: flex;
+          img {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .horarios {
+        border: none;
+        background: #4b1d1a !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .times {
+          text-align: center;
+          h1 {
+            font-size: 34px;
+          }
+          h3 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+        .maps {
+          width: 300px !important;
+          height: 300px !important;
+        }
+      }
+      .tutorials {
+        height: 500px;
+        iframe {
+          height: 252px;
+        }
+        .text {
+          h1 {
+            font-size: 35px;
+            line-height: 35px;
+          }
+        }
+        .swiper-button-prev::after, .swiper-button-next::after {
+            width: 20px !important;
+            font-size: 32px;
+        }
+        .swiper.swiper-initialized.swiper-horizontal.swiper-ios.mySwiper.swiper-backface-hidden {
+          width: 90%;
+        } 
+      }
+      .footer {
+        flex-direction: column;
+        height: auto !important;
+        justify-content: center;
+        gap: 80px;
       }
     }
   }
