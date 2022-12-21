@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import backgroundTransp from "../../assets/fundo-transp.jpg"
 
 const colors = {
   colors01: "#d4bdb0",
@@ -21,6 +22,7 @@ const styled_homepage = styled.div`
 
       .HomePage__Apresentacao_Content {
         height: auto;
+        padding: 0 0 50px 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -207,11 +209,14 @@ const styled_homepage = styled.div`
         "mainItem item05 item05 item06 item06";
     }
     .carousel {
-      width: 600px;
+      width: 40%;
       position: relative;
-      small.Arrasta {
+      .Arrasta {
+        margin: 5px 0;
+        width: 100%;
         color: #fff;
-        margin-left: 240px;
+        display: flex;
+        justify-content: center;
       }
       .mySwiper {
         #app {
@@ -233,8 +238,6 @@ const styled_homepage = styled.div`
         }
 
         .swiper {
-          width: 200px !important;
-          height: 200px !important;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -356,16 +359,24 @@ const styled_homepage = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(0, 0, 0, 0.2);
       height: auto;
       padding: 50px 0;
-
+      background-image: url(${backgroundTransp});
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       gap: 100px;
+      
       .transportadora {
-        width: 220px;
+        background-image: linear-gradient(290deg, #000, #004185);
+        border: 5px solid #004185;
+        width: auto;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img {
-          filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 1));
-          width: 100%;
+          width: 200px;
         }
       }
     }
@@ -495,12 +506,15 @@ const styled_homepage = styled.div`
       .carousel {
         height: auto;
         padding: 50px 0;
-        small {
+        width: 100vw;
+
+        .Arrasta {
+          margin-bottom: -30px;
           width: 100vw !important;
           text-align: center;
         }
         .swiper.swiper-cube.swiper-3d.swiper-initialized.swiper-horizontal.swiper-ios.swiper-watch-progress.mySwiper {
-          width: 300px !important;
+          max-width: 90vw !important;
           height: auto;
           position: relative;
           margin: 20px auto;
@@ -575,8 +589,8 @@ const styled_homepage = styled.div`
             font-size: 32px;
           }
           .swiper-slide {
-            width: 300px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
           }
         }
         .HomePage__Sobre__Text {
@@ -640,6 +654,8 @@ const styled_homepage = styled.div`
         .swiper-button-next::after {
           width: 20px !important;
           font-size: 32px;
+          color: white;
+          filter: drop-shadow(2px 2px 1px #000);
         }
         .swiper.swiper-initialized.swiper-horizontal.swiper-ios.mySwiper.swiper-backface-hidden {
           width: 90%;

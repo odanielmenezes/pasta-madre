@@ -79,7 +79,9 @@ export function Component() {
               </div>
             </div>
             <div className="carousel">
-              <small className="Arrasta">👈 arrasta pro lado 👉</small>
+              <div className="Arrasta">
+                <small>👈 arrasta pro lado 👉</small>
+              </div>
               <Swiper
                 effect={"cube"}
                 grabCursor={true}
@@ -176,10 +178,10 @@ export function Component() {
               <br /> para pizza cone.
             </h1>
             <p>
-              Tudo em um só lugar. Fornecemos a assadeira adaptada para qualquer tipo de forno,
-              (sendo acima de 40 litros), com ela você pode começar um negocio
-              diferente com baixíssimo custo de investimento, alem de
-              embalagens, suportes e banners.
+              Tudo em um só lugar. Fornecemos a assadeira adaptada para qualquer
+              tipo de forno, (sendo acima de 40 litros), com ela você pode
+              começar um negocio diferente com baixíssimo custo de investimento,
+              alem de embalagens, suportes e banners.
             </p>
             <a
               href="http://wa.me/555195594785/"
