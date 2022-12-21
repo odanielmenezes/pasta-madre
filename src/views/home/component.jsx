@@ -1,6 +1,11 @@
 import Styled from "./style";
-import AcessoriosPizza from "../../assets/frono-acessorios.png";
-import Logo from "../../assets/logo.png";
+import { Header } from "../../components/header/header";
+import AcessoriosPizza from "../../assets/capa-acessorios.png";
+import AcessoriosPizza01 from "../../assets/acessorio-01.png";
+import AcessoriosPizza02 from "../../assets/acessorio-02.png";
+import AcessoriosPizza03 from "../../assets/acessorio-03.png";
+import AcessoriosPizza04 from "../../assets/acessorio-04.png";
+import Logo from "../../assets/main-logo.png";
 import Item01 from "../../assets/item01.png";
 import Item02 from "../../assets/item02.png";
 import Item03 from "../../assets/item03.png";
@@ -8,7 +13,8 @@ import Massa01 from "../../assets/massa-sabor-01.png";
 import Massa02 from "../../assets/massa-sabor-02.png";
 import Massa03 from "../../assets/massa-sabor-03.png";
 import Massa04 from "../../assets/massa-sabor-04.jpg";
-import Massa05 from "../../assets/massa-sabor-05.jpg";
+import Massa05 from "../../assets/massa-capa.png";
+import Massa06 from "../../assets/massa-14cm.png";
 import LogoSaoMiguel from "../../assets/logo-sao-miguel.png";
 import LogoCorreios from "../../assets/logo-correios.png";
 import LogoSedex from "../../assets/logo-sedex.png";
@@ -16,24 +22,24 @@ import LogoViopex from "../../assets/logo-viopex.png";
 import GoogleMapReact from "google-map-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCaretRight,
   faTruckFast,
-  faGaugeSimpleHigh,
   faStar,
   faCopyright,
+  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
   faFacebook,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import { EffectCube, Pagination, Navigation } from "swiper";
+import { EffectCube, Pagination, Navigation, EffectFlip } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
+import "swiper/css/effect-flip";
 
 export function Component() {
   const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -47,14 +53,12 @@ export function Component() {
   return (
     <Styled>
       <div className="HomePage">
-        <div className="HomePage__Apresentacao">
+        <Header />
+        <div className="HomePage__Apresentacao" id="inicio">
           <div className="HomePage__Apresentacao_Content">
             <div className="HomePage__Apresentacao_Texts">
               <div className="HomePage__Apresentacao_MainText">
-                <h1>
-                  <img src={Logo} alt="" />
-                  <span>Pasta Madre</span>
-                </h1>
+                <img src={Logo} alt="" />
                 <small>
                   a pasta madre é especialista em massas pré assadas e
                   acessórios para pizza em cone, nossas massas são artesanais
@@ -69,8 +73,7 @@ export function Component() {
                 >
                   <button>
                     {" "}
-                    Solicite um orçamento{" "}
-                    <FontAwesomeIcon icon={faCaretRight} />
+                    Solicite um orçamento <FontAwesomeIcon icon={faWhatsapp} />
                   </button>
                 </a>
               </div>
@@ -105,17 +108,21 @@ export function Component() {
                 <SwiperSlide>
                   <img src={Massa04} alt="" />
                 </SwiperSlide>
+                <SwiperSlide>
+                  <img src={Massa06} alt="" />
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>
         </div>
-        <div className="softskills">
+        <div className="softskills" id="softskills">
           <div className="softskills__items">
             <div className="soft__item">
-              <FontAwesomeIcon icon={faStar} />
               <img src={Item01} alt="" />
               <div className="SoftTexts__Item">
-                <h1>Qualidade</h1>
+                <h1>
+                  Qualidade <FontAwesomeIcon icon={faStar} />
+                </h1>
                 <p>
                   trabalhamos com todo cuidado para lhe entregar um produto
                   padronizado e com insumos da melhor qualidade.
@@ -123,21 +130,23 @@ export function Component() {
               </div>
             </div>
             <div className="soft__item">
-              <FontAwesomeIcon icon={faGaugeSimpleHigh} />
               <img src={Item02} alt="" />
               <div className="SoftTexts__Item">
-                <h1>Agilidade</h1>
+                <h1>
+                  Agilidade <FontAwesomeIcon icon={faClock} />
+                </h1>
                 <p>
                   Estamos preparados para lhe enviar o seu pedido com a maior
-                  agilidade inclusive em grandes de mandas.
+                  agilidade inclusive em grandes demandas.
                 </p>
               </div>
             </div>
             <div className="soft__item">
-              <FontAwesomeIcon icon={faTruckFast} />
               <img src={Item03} alt="" />
               <div className="SoftTexts__Item">
-                <h1>Envios para todo BR</h1>
+                <h1>
+                  Envios para todo BR <FontAwesomeIcon icon={faTruckFast} />{" "}
+                </h1>
                 <p>
                   enviamos para todo Brasil via transportadoras expressas e
                   correios.
@@ -146,7 +155,7 @@ export function Component() {
             </div>
           </div>
         </div>
-        <div className="transportadoras">
+        <div className="transportadoras" id="transportadoras">
           <div className="transportadora">
             <img src={LogoSaoMiguel} alt="" />
           </div>
@@ -160,14 +169,14 @@ export function Component() {
             <img src={LogoViopex} alt="" />
           </div>
         </div>
-        <div className="HomePage__Sobre">
+        <div className="HomePage__Sobre" id="acessorios">
           <div className="HomePage__Sobre__Text">
             <h1>
               Acessórios
               <br /> para pizza cone.
             </h1>
             <p>
-              fornecemos a assadeira adaptada para qualquer tipo de forno,
+              Tudo em um só lugar. Fornecemos a assadeira adaptada para qualquer tipo de forno,
               (sendo acima de 40 litros), com ela você pode começar um negocio
               diferente com baixíssimo custo de investimento, alem de
               embalagens, suportes e banners.
@@ -178,15 +187,38 @@ export function Component() {
               rel="noreferrer"
             >
               <button>
-                Quero saber mais <FontAwesomeIcon icon={faCaretRight} />
+                Quero saber mais <FontAwesomeIcon icon={faWhatsapp} />
               </button>
             </a>
           </div>
           <div className="HomePage__Sobre__Img">
-            <img src={AcessoriosPizza} alt="User" />
+            <Swiper
+              effect={"flip"}
+              grabCursor={true}
+              pagination={true}
+              navigation={true}
+              modules={[EffectFlip, Pagination, Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src={AcessoriosPizza} alt="User" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={AcessoriosPizza01} alt="User" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={AcessoriosPizza02} alt="User" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={AcessoriosPizza03} alt="User" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={AcessoriosPizza04} alt="User" />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
-        <div className="horarios">
+        <div className="horarios" id="horarios">
           <div className="times">
             <h1>Horários e Localização:</h1>
             <h3>Av Princesa Isabel - n 285 - Cachoeirinha - RS</h3>
@@ -211,7 +243,7 @@ export function Component() {
             </GoogleMapReact>
           </div>
         </div>
-        <div className="tutorials">
+        <div className="tutorials" id="tutorials">
           <div className="text">
             <h1>Confira um pouco do nosso conteúdo no YouTube:</h1>
           </div>

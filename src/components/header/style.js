@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const colors = {
   colors01: "#d4bdb0",
-  colors02: "#FFF",
+  colors02: "#dca554",
   colors03: "#dca554",
   colors04: "#9b5a45",
   colors05: "#4b1d1a",
@@ -11,53 +11,74 @@ const colors = {
 const styled_header = styled.div`
   .Header {
     width: auto;
-    height: 100vh;
+    position: relative;
     background-color: ${colors.colors05};
-    padding: 30px 0 0 0;
-    button.ant-btn.css-dev-only-do-not-override-1ij74fp.ant-btn-primary {
+    position: fixed;
+    z-index: 1;
+    padding: 0 20px;
+    border-radius: 30px;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px #000;
+    .Header__Items {
+      a {
+        color: #fff !important;
+      }
+      .ant-anchor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .ant-anchor-link {
+          display: flex;
+          justify-content: center;
+          a.ant-anchor-link-title.ant-anchor-link-title {
+            small {
+              font-size: 13px;
+              margin-right: 11px;
+            }
+          }
+        }
+        .ant-anchor-ink {
+          display: none;
+        }
+      }
       display: flex;
-      margin: auto;
-      align-items: center;
-      background-color: transparent;
-      animation: none;
-      font-size: 22px;
-    }
-    :where(
-        .css-dev-only-do-not-override-1ij74fp
-      )[ant-click-animating-without-extra-node="true"],
-    :where(.css-dev-only-do-not-override-1ij74fp)[ant-click-animating="true"] {
-      --antd-wave-shadow-color: transparent;
-      border: none;
-      /* --scroll-bar: 0; */
-      /* position: relative; */
-    }
-    :where(.css-dev-only-do-not-override-1ij74fp).ant-btn-primary {
-    box-shadow: none;
-}
-    ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.ant-menu-inline-collapsed.css-dev-only-do-not-override-1ij74fp {
-      height: 100vh;
-      background-color: ${colors.colors05};
-      box-shadow: 2px 2 px 6px rgba(0, 0, 0, 0.8);
-    }
-    ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark.css-dev-only-do-not-override-1ij74fp {
-      height: 100vh;
-      background-color: ${colors.colors05};
-    }
-    li.ant-menu-item.ant-menu-item-selected {
-      background-color: rgba(0, 0, 0, 0.8);
     }
   }
   @media (max-width: 600px) {
     .Header {
-      width: 100vw;
-      min-width: 380px;
-      .Header__Logo {
-        width: auto;
+      display: flex;
+      justify-content: center;
+      width: 100vw !important;
+      max-width: 100vw;
+      margin: 0 auto 0 -30px;
+      border-radius: 0;
+      z-index: 1;
+      overflow: scroll;
+      ::-webkit-scrollbar {
+        display: none;
       }
-      ul {
-        li {
-          font-size: 10px;
+      .Header__Items {
+        .ant-anchor {
+          gap: 0;
+          margin-left: 0 auto;
+          .ant-anchor-link {
+            display: flex;
+            justify-content: center;
+            a.ant-anchor-link-title.ant-anchor-link-title {
+              margin: 0 -5px;
+              small {
+                font-size: 11px;
+                margin-right: 11px;
+              }
+            }
+          }
+          .ant-anchor-ink {
+            display: none;
+          }
         }
+        display: flex;
       }
     }
   }

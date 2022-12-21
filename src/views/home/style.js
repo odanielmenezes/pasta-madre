@@ -10,6 +10,7 @@ const colors = {
 
 const styled_homepage = styled.div`
   .HomePage {
+    background-color: #4b1d1a;
     .HomePage__Apresentacao {
       background-color: ${colors.colors05}; /* Used if the image is unavailable */
       height: auto; /* You must set a specified height */
@@ -20,17 +21,10 @@ const styled_homepage = styled.div`
 
       .HomePage__Apresentacao_Content {
         height: auto;
-        padding: 50px 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-image: linear-gradient(
-          to left,
-          rgba(0, 0, 0, 1),
-          rgba(0, 0, 0, 0.8),
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0.6)
-        );
+        background: rgba(0, 0, 0, 0.2);
         height: 100vh;
 
         .HomePage__Apresentacao_Texts {
@@ -50,32 +44,30 @@ const styled_homepage = styled.div`
               text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
               position: relative;
               width: 500px;
-              img {
-                right: 189px;
-                top: -29px;
-                position: absolute;
-                width: 100px;
-                transform: rotate(20deg);
-                filter: drop-shadow(5px 5px 5px #000);
-              }
             }
             img {
-              width: 550px;
-              margin-left: -27px;
+              width: 450px;
+              margin: 50px auto;
+              filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 1));
             }
             small {
-              font-size: 18px;
+              font-size: 20px;
               width: 450px;
               margin-top: -40px;
+              text-align: justify;
+            }
+            a {
+              width: 50%;
+              margin: 20px auto;
             }
             button {
               font-size: 1em;
-              width: 50%;
+              width: 100%;
               padding: 20px 0;
               border-radius: 40px;
               outline-style: none;
               border-style: none;
-              background-color: ${colors.colors05};
+              background-color: #00b52c;
               color: #fff;
               font-weight: bold;
               box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
@@ -99,6 +91,25 @@ const styled_homepage = styled.div`
       justify-content: center;
       align-items: center;
       gap: 85px;
+      .HomePage__Sobre__Img {
+        .swiper {
+          width: 500px;
+          height: 500px;
+          padding: 50px;
+        }
+
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 500px;
+          height: 500px;
+        }
+
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+        }
+      }
 
       .HomePage__Sobre__Text {
         width: 600px;
@@ -122,26 +133,26 @@ const styled_homepage = styled.div`
           text-align: center;
         }
         button {
-              font-size: 1em;
-              width: 300px;
-              padding: 20px 0;
-              border-radius: 40px;
-              outline-style: none;
-              border-style: none;
-              background-color: ${colors.colors05};
-              color: #fff;
-              font-weight: bold;
-              box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
-              cursor: pointer;
-              transition: 0.1s;
-              border: 1px solid #000;
-              margin: 20px 0;
-            }
-            button:hover {
-              transform: scale(1.03);
-              box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.8);
-              transition: 0.1s ease-in;
-            }
+          font-size: 1em;
+          width: 300px;
+          padding: 20px 0;
+          border-radius: 40px;
+          outline-style: none;
+          border-style: none;
+          background-color: #00b52c;
+          color: #fff;
+          font-weight: bold;
+          box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+          cursor: pointer;
+          transition: 0.1s;
+          border: 1px solid #000;
+          margin: 20px 0;
+        }
+        button:hover {
+          transform: scale(1.03);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.8);
+          transition: 0.1s ease-in;
+        }
       }
       img {
         width: 500px;
@@ -250,25 +261,21 @@ const styled_homepage = styled.div`
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+
       .softskills__items {
-        width: 70vw;
+        width: 100vw;
         display: flex;
         justify-content: space-evenly;
-        flex-direction: column;
-        gap: 50px;
         .soft__item {
+          background: rgba(0, 0, 0, 0.2);
+          max-width: 500px;
           display: flex;
+          flex-direction: column;
+          align-items: center;
           position: relative;
           text-align: center;
-          background: rgba(0,0,0, .1);
-          padding: 20px;
+          padding: 50px 0;
 
-          &:nth-child(2) {
-            flex-direction: row-reverse;
-            svg {
-              left: 0;
-            }
-          }
           .SoftTexts__Item {
             display: flex;
             flex-direction: column;
@@ -280,10 +287,6 @@ const styled_homepage = styled.div`
             width: 380px;
           }
           svg {
-            top: -25px;
-            right: -20px;
-            font-size: 62px;
-            position: absolute;
             color: #fff;
             filter: drop-shadow(5px 5px 5px #000);
           }
@@ -291,7 +294,6 @@ const styled_homepage = styled.div`
             font-family: "Emilys Candy", cursive;
             color: #fff;
             font-size: 42px;
-            white-space: nowrap;
           }
           p {
             margin: 0 auto;
@@ -303,13 +305,13 @@ const styled_homepage = styled.div`
       }
     }
     .footer {
-      background-color: ${colors.colors05};
+      background: rgba(0, 0, 0, 0.2);
       height: auto;
       padding: 50px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: #FFF;
+      color: #fff;
 
       .LogoPasta {
         width: 170px;
@@ -334,17 +336,17 @@ const styled_homepage = styled.div`
           gap: 15px;
           a {
             text-decoration: none;
-            color: #FFF;
+            color: #fff;
           }
           svg {
             cursor: pointer;
             font-size: 42px;
-            transition: .3s;
-             
+            transition: 0.3s;
+
             :hover {
               transform: rotate(-20deg);
               filter: drop-shadow(2px 2px 2px #000);
-              transition: .3s;
+              transition: 0.3s;
             }
           }
         }
@@ -354,10 +356,10 @@ const styled_homepage = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      background: ${colors.colors05};
+      background: rgba(0, 0, 0, 0.2);
       height: auto;
       padding: 50px 0;
-      
+
       gap: 100px;
       .transportadora {
         width: 220px;
@@ -421,11 +423,7 @@ const styled_homepage = styled.div`
       }
     }
     .horarios {
-      background-image: linear-gradient(
-        90deg,
-        ${colors.colors05},
-        rgba(0, 0, 0, 1) 110%
-      );
+      background: rgba(0, 0, 0, 0.2);
       height: auto;
       padding: 100px 0;
       display: flex;
@@ -473,13 +471,9 @@ const styled_homepage = styled.div`
                 margin: 0 auto;
                 width: 220px;
                 position: relative;
-
-                img {
-                  position: absolute;
-                  right: 0;
-                  top: -22px;
-                  width: 60px;
-                }
+              }
+              img {
+                width: 300px;
               }
               small {
                 width: 300px;
@@ -491,7 +485,7 @@ const styled_homepage = styled.div`
                 font-size: 14px;
                 display: flex;
                 justify-content: center;
-                width: 500px;
+                width: 80%;
                 margin-top: -30px;
               }
             }
@@ -510,12 +504,13 @@ const styled_homepage = styled.div`
           height: auto;
           position: relative;
           margin: 20px auto;
+          z-index: 0;
         }
         .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
           bottom: -45px;
         }
         span.swiper-pagination-bullet {
-            border: 1px solid #FFF;
+          border: 1px solid #fff;
         }
       }
       .softskills {
@@ -540,9 +535,14 @@ const styled_homepage = styled.div`
               top: -20px;
             }
             h1 {
-              font-size: 18px;
+              font-size: 20px;
               width: 95%;
               white-space: pre-wrap;
+
+              svg {
+                font-size: 1em;
+                filter: drop-shadow(2px 2px 2px #000);
+              }
             }
             p {
               text-align: center;
@@ -550,8 +550,8 @@ const styled_homepage = styled.div`
             }
             img {
               margin: auto;
-              width: 140px;
-              height: 140px;
+              width: 200px;
+              height: 200px;
             }
           }
         }
@@ -562,7 +562,23 @@ const styled_homepage = styled.div`
       }
       .HomePage__Sobre {
         flex-direction: column;
-        gap: 30px !important;
+        gap: 0px !important;
+        .HomePage__Sobre__Img {
+          .swiper {
+            width: 300px;
+            height: 300px;
+            z-index: 0;
+          }
+          .swiper-button-prev::after,
+          .swiper-button-next::after {
+            width: 20px !important;
+            font-size: 32px;
+          }
+          .swiper-slide {
+            width: 300px;
+            height: 300px;
+          }
+        }
         .HomePage__Sobre__Text {
           h1 {
             font-size: 35px;
@@ -611,19 +627,23 @@ const styled_homepage = styled.div`
         iframe {
           height: 252px;
         }
+        .swiper.swiper-initialized.swiper-horizontal.swiper-ios.mySwiper {
+          z-index: 0;
+        }
         .text {
           h1 {
             font-size: 35px;
             line-height: 35px;
           }
         }
-        .swiper-button-prev::after, .swiper-button-next::after {
-            width: 20px !important;
-            font-size: 32px;
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+          width: 20px !important;
+          font-size: 32px;
         }
         .swiper.swiper-initialized.swiper-horizontal.swiper-ios.mySwiper.swiper-backface-hidden {
           width: 90%;
-        } 
+        }
       }
       .footer {
         flex-direction: column;

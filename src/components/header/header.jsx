@@ -1,73 +1,114 @@
 import React, { useState } from "react";
 import Styled from "./style";
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  PictureOutlined,
-} from "@ant-design/icons";
-import { Button, Menu } from "antd";
-// import { Button, Menu } from "antd";
-// import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Anchor } from "antd";
+
+const { Link } = Anchor;
 
 export function Header() {
-  const [collapsed, setCollapsed] = useState(false);
+  const [home, setHome] = useState(false);
+  const [soft, setSoft] = useState(false);
+  const [acessorios, setAcessorios] = useState(false);
+  const [horarios, setHorarios] = useState(false);
+  const [tutorials, setTutorials] = useState(false);
 
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
-  };
-  function getItem(label, key, icon, children, type) {
-    return {
-      key,
-      icon,
-      children,
-      label,
-      type,
-    };
+  function teste(e) {
+    console.log(e);
+    if (e.target.innerText === "Home") {
+      setHome(true);
+      setSoft(false);
+      setAcessorios(false);
+      setHorarios(false);
+      setTutorials(false);
+      console.log("AAAAAAA");
+    } else if (e.target.innerText === "Destaques") {
+      setHome(false);
+      setSoft(true);
+      setAcessorios(false);
+      setHorarios(false);
+      setTutorials(false);
+      console.log("XXXXXXXX");
+    } else if (e.target.innerText === "Acessórios") {
+      setHome(false);
+      setSoft(false);
+      setAcessorios(true);
+      setHorarios(false);
+      setTutorials(false);
+    } else if (e.target.innerText === "Horário e Localização") {
+      setHome(false);
+      setSoft(false);
+      setAcessorios(false);
+      setHorarios(true);
+      setTutorials(false);
+    } else if (e.target.innerText === "Videos") {
+      setHome(false);
+      setSoft(false);
+      setAcessorios(false);
+      setHorarios(false);
+      setTutorials(true);
+    }
   }
-  const items = [
-    getItem("Galeria", "1", <PictureOutlined />),
-  ];
   return (
     <Styled>
       <div className="Header">
-      <Button
-            type="primary"
-            onClick={toggleCollapsed}
-            style={{
-              marginBottom: 16,
-            }}
-          >
-            {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          </Button>
-        <Menu
-          defaultSelectedKeys={["1"]}
-          defaultOpenKeys={["sub1"]}
-          mode="inline"
-          theme="dark"
-          inlineCollapsed={collapsed}
-          items={items}
-        />
-        {/* <div className="Header__Logo">
-          <img src={Logo} alt="Logo" />
-          <div className="Header__Icons">
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faInstagram} />
-          </div>
-        </div>
         <div className="Header__Items">
-          <ul>
-            <Link to="/">
-              <li>HOME</li>
-            </Link>
-            <li>CONTATO</li>
-            <Link to="/orcamento">
-              <li>ORÇAMENTO</li>
-            </Link>
-            <li>GALERIA</li>
-          </ul>
-        </div> */}
+          <Anchor style={{ display: "flex" }} className="ancor">
+            <Link
+              href="#inicio"
+              title={
+                <small
+                  style={home ? { borderBottom: "1px solid #FFF"} : {}}
+                  onClick={(e) => teste(e)}
+                >
+                  Home
+                </small>
+              }
+            />
+            <Link
+              href="#softskills"
+              title={
+                <small
+                  style={soft ? { borderBottom: "1px solid #FFF"} : {}}
+                  onClick={(e) => teste(e)}
+                >
+                  Destaques
+                </small>
+              }
+            />
+            <Link
+              href="#acessorios"
+              title={
+                <small
+                  style={acessorios ? { borderBottom: "1px solid #FFF"} : {}}
+                  onClick={(e) => teste(e)}
+                >
+                  Acessórios
+                </small>
+              }
+            />
+            <Link
+              href="#horarios"
+              title={
+                <small
+                  style={horarios ? { borderBottom: "1px solid #FFF"} : {}}
+                  onClick={(e) => teste(e)}
+                >
+                  Horário e Localização
+                </small>
+              }
+            />
+            <Link
+              href="#tutorials"
+              title={
+                <small
+                  style={tutorials ? { borderBottom: "1px solid #FFF"} : {}}
+                  onClick={(e) => teste(e)}
+                >
+                  Videos
+                </small>
+              }
+            />
+          </Anchor>
+        </div>
       </div>
     </Styled>
   );
